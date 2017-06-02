@@ -19,24 +19,27 @@ public class ResumeClass {
 	   
 		//Declare variables for Education input
        ArrayList<String> listEd = new ArrayList<String>();
-       int edI = 0;
+       int edI=0;
 	   
        ArrayList<String> listExp = new ArrayList<String>();
-	   int expI = 0;
+	   int expI=0;
 	   
        ArrayList<String> listSkills = new ArrayList<String>();
-	   int skI = 0;
+	   int skI=0;
 
-       Scanner input = new Scanner(System.in);
+       //Scanner input = new Scanner(System.in);
          
 	   System.out.println("Enter your first name: ");
-	   fName = input.next();
+       Scanner inputFname = new Scanner(System.in);  
+	   fName = inputFname.next();
 	   System.out.println("Enter your last name: ");
-	   lName = input.next();
+       Scanner inputLname = new Scanner(System.in);  
+	   lName = inputLname.next();
 
 	   do{
 			System.out.println("Enter your email address: ");
-			eMail = input.next();
+            Scanner inputEmail = new Scanner(System.in);  
+			eMail = inputEmail.next();
 			if (eMail == null)
 				result = false;
 		}while(eMail == null);
@@ -44,10 +47,12 @@ public class ResumeClass {
 		do{
 	        System.out.println("Current Education shows " + listEd);
             System.out.println("Add more details? (y/n)");
-            answer = input.next();
+            Scanner inputEdr = new Scanner(System.in);  
+            answer = inputEdr.next();
             if (answer.equalsIgnoreCase("y")){
                 System.out.println("Enter Education Details: ");
-                String eInput = input.nextLine();
+                Scanner inputEd = new Scanner(System.in);    
+                String eInput = inputEd.nextLine();
                 listEd.add(eInput);
                 edI++; 
             	}           
@@ -56,10 +61,12 @@ public class ResumeClass {
         do {
             System.out.println("Current Experience shows " + listExp);
             System.out.println("Add more details? (y/n)");
-            answer = input.next();
+            Scanner inputExpr = new Scanner(System.in);  
+            answer = inputExpr.next();
             if (answer.equalsIgnoreCase("y")){
                 System.out.println("Enter Experience Details: ");
-                String xInput = input.nextLine();
+                Scanner inputExp = new Scanner(System.in);  
+                String xInput = inputExp.nextLine();
                 listExp.add(xInput);
                 expI++;       
             }   
@@ -68,10 +75,12 @@ public class ResumeClass {
         do {
             System.out.println("Current Skills shows " + listSkills);
             System.out.println("Add more details? (y/n)");
-            answer = input.next();
+            Scanner inputSkr = new Scanner(System.in);  
+            answer = inputSkr.next();
             if (answer.equalsIgnoreCase("y")){
                 System.out.println("Enter Skills Details: ");
-                String sInput = input.nextLine();
+                Scanner inputSkills = new Scanner(System.in);  
+                String sInput = inputSkills.nextLine();
                 listSkills.add(sInput);
                 skI++; 
             }   
@@ -87,13 +96,13 @@ public class ResumeClass {
         }
 
         System.out.println("\r\t\n\tExperience");
-        for (int i = 0; i < listExp.size(); i++){
-           	System.out.print(listExp.get(i)+"\n");
+        for (int x = 0; x < listExp.size(); x++){
+           	System.out.print(listExp.get(x)+"\n");
         }
 
         System.out.println("\r\t\n\tSkills");
-        for (int i = 0; i < listSkills.size(); i++){
-           	System.out.print(listSkills.get(i));
+        for (int y = 0; y < listSkills.size(); y++){
+           	System.out.print(listSkills.get(y));
         }
 
   }
