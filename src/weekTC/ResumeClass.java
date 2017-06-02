@@ -17,7 +17,7 @@ public class ResumeClass {
 	   Boolean result;
 	   String answer;;
 	   
-		//Declare variables for Education input
+		//Declare arrays
        ArrayList<String> listEd = new ArrayList<String>();
        int edI=0;
 	   
@@ -27,8 +27,8 @@ public class ResumeClass {
        ArrayList<String> listSkills = new ArrayList<String>();
 	   int skI=0;
 
-       //Scanner input = new Scanner(System.in);
-         
+   
+		//get user firstname, last name & email address
 	   System.out.println("Enter your first name: ");
        Scanner inputFname = new Scanner(System.in);  
 	   fName = inputFname.next();
@@ -44,7 +44,7 @@ public class ResumeClass {
 				result = false;
 		}while(eMail == null);
 	   	
-		do{
+		do{  //get the education details
 	        System.out.println("Current Education shows " + listEd);
             System.out.println("Add more details? (y/n)");
             Scanner inputEdr = new Scanner(System.in);  
@@ -58,7 +58,7 @@ public class ResumeClass {
             	}           
 		  } while (answer.equalsIgnoreCase("y"));
 
-        do {
+        do {//get the experience details
             System.out.println("Current Experience shows " + listExp);
             System.out.println("Add more details? (y/n)");
             Scanner inputExpr = new Scanner(System.in);  
@@ -72,7 +72,7 @@ public class ResumeClass {
             }   
 		  } while (answer.equalsIgnoreCase("y"));
         
-        do {
+        do {//get the skills & Rating details
             System.out.println("Current Skills shows " + listSkills);
             System.out.println("Add more details? (y/n)");
             Scanner inputSkr = new Scanner(System.in);  
